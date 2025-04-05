@@ -46,6 +46,6 @@ jobs:
 
             - name: Commit log file
               run: |
-                  git add logs/notion_sync_${{ steps.timestamp.outputs.value }}.log
+                  git add logs/notion_sync_${{ steps.timestamp.outputs.value }}.synclog
                   git commit -m "Add database sync log for ${{ steps.timestamp.outputs.value }}" || echo "No changes to commit"
                   git push
