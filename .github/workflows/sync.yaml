@@ -37,7 +37,7 @@ jobs:
                   NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
                   MASTER_DB_ID: ${{ secrets.MASTER_DB_ID }}
                   SLAVE_DB_ID: ${{ secrets.SLAVE_DB_ID }}
-              run: python notion-db-sync.py > logs/notion_sync_${{ steps.timestamp.outputs.value }}.log
+              run: python notion-db-sync.py > logs/notion_sync_${{ steps.timestamp.outputs.value }}.synclog
 
             - name: Configure Git
               run: |
